@@ -9,5 +9,6 @@ public class SalerDummyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SalerDummyApplication.class, args);
 	}
+	// *** 
 
 }
