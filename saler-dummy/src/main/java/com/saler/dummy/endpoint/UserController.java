@@ -17,10 +17,16 @@ import com.saler.dummy.service.ProductService;
 public class UserController {
 	//
 
-	
-	@GetMapping(value = "/products",produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/products", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Product>> productList() {
-		List<Product> lists = ProductService.getDummyProductList();
-		return new ResponseEntity<>(lists, HttpStatus.OK);
+		List<Product> lists = null;
+		HttpStatus status = HttpStatus.NO_CONTENT;
+		try {
+			lists = ProductService.getDummyProductList();
+			status = HttpStatus.OK;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new ResponseEntity<>(lists, status);
 	}
 }
