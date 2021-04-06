@@ -15,7 +15,7 @@ import com.saler.dummy.service.ProductService;
 @RestController
 @RequestMapping(value = "/dummy")
 public class UserController {
-	//
+	//1
 
 	@GetMapping(value = "/products", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Product>> productList() {
