@@ -1,1 +1,1 @@
-web: java -jar target/saler-dummy-0.0.1.jar -Dserver.port=$PORT $JAR_OPTS
+web: java -Dserver.port=$PORT -jar target/saler-dummy-0.0.1.jar
